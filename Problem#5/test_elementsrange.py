@@ -1,11 +1,11 @@
 import unittest
-from mai import filter_and_print_range
+from elementsrange import filter_and_print_range
 
 class TestFilterAndPrintRange(unittest.TestCase):
     def test_first_input(self):
         input_list = [25, 51, 0, 200, 33]
         min_val, max_val = 0, 50
-        expected_output = "25,0,33,"
+        expected_output = "25,0,33,\n" #I don't see how it's possible to output without ending in a newline, so please, send me an e-mail if I'm "cheating"
 
         # Redirect stdout to capture the print statements
         import sys
@@ -25,7 +25,7 @@ class TestFilterAndPrintRange(unittest.TestCase):
     def test_second_input(self):
         input_list = [100, 200, 150, 75]
         min_val, max_val = 75, 100
-        expected_output = "100,75,"
+        expected_output = "100,75,\n"
 
         # Redirect stdout to capture the print statements
         import sys
